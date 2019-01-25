@@ -22,3 +22,11 @@
 .money {
     margin-left: .8rem;
 }
+
+
+@media (max-width: 650px) {
+    .info {
+        font-size: 0.7rem;
+    }
+
+}
