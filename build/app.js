@@ -29390,9 +29390,14 @@ var Bitcoin = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.box },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TextField___default.a, {
                         value: this.state.input,
-                        onChange: this._handleChange
+                        onChange: this._handleChange,
+                        id: 'filled-search',
+                        label: 'Enter a value',
+                        type: 'search',
+                        margin: 'normal',
+                        variant: 'filled'
                     })
                 )
             );
