@@ -43,21 +43,21 @@ class Bitcoin extends Component {
         return Object.keys(bpi)
             .map(coin => {
                 const price = bpi[coin].rate_float;
-                const result = price.toFixed(2);
+                const result = price;
                 
 
                 if (coin === 'USD'){
                     return (
                         <div className={styles.info} key={coin}>
                             <hr/>
-                            <strong>{input}</strong> BTC is: <strong>U$S {input * result}</strong> 
+                            <strong>{input}</strong> BTC is: <strong>U$S {input * Math.round(result)}</strong> 
                             <span className={styles.money}>{coin}</span>
                         </div>
                     )  
                 } else {
                     return (
                         <div className={styles.info} key={coin}>
-                            <strong>{input}</strong> BTC is: <strong>$ {input * result}</strong>
+                            <strong>{input}</strong> BTC is: <strong>$ {input * Math.round(result)}</strong>
                             <span className={styles.money}>{coin}</span>
                         </div>
                     )

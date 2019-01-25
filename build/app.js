@@ -29317,7 +29317,7 @@ var Bitcoin = function (_Component) {
 
             return Object.keys(bpi).map(function (coin) {
                 var price = bpi[coin].rate_float;
-                var result = price.toFixed(2);
+                var result = price;
 
                 if (coin === 'USD') {
                     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -29334,7 +29334,7 @@ var Bitcoin = function (_Component) {
                             'strong',
                             null,
                             'U$S ',
-                            input * result
+                            input * Math.round(result)
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'span',
@@ -29356,7 +29356,7 @@ var Bitcoin = function (_Component) {
                             'strong',
                             null,
                             '$ ',
-                            input * result
+                            input * Math.round(result)
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'span',
