@@ -1,0 +1,28 @@
+.root {
+  align-items: center;
+  background: #11171d;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  color: #fff;
+  font-size: 15pt;
+  margin: 0;
+  padding-left: 4rem;
+}
+
+
+
+@media (max-width: 828px) {
+
+  .logo {
+    padding-left: initial;
+    margin: auto;
+    
+  }
+
+
+}
