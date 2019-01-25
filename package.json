@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npm run build && node server.js",
+        "start": "node server.js",
         "build": "webpack --colors",
         "serve": "webpack-dev-server --content-base build/ --color --progress",
         "test": "echo \"Error: no test specified\" && exit 1"
