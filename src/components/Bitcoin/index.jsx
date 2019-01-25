@@ -46,11 +46,13 @@ class Bitcoin extends Component {
 
                 const show = coin === 'USD' ? 'US$' : '$';
                 return (
+                
                     <div className={styles.info} key={coin}>
                         <hr/>
                         <strong>{input}</strong> BTC is: <strong>{show}{(input * result).toFixed(2)}</strong>                                                       
                         <span className={styles.money}>{coin}</span>
                     </div>
+        
                 );
                 
                

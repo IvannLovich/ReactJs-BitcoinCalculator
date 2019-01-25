@@ -29339,6 +29339,23 @@ var Bitcoin = function (_Component) {
                         coin
                     )
                 );
+
+                // if (coin === 'USD'){
+                //     return (
+                //         <div className={styles.info} key={coin}>
+                //             <hr/>
+                //             <strong>{input}</strong> BTC is: <strong>U$S {(input * result).toFixed(2)}</strong> 
+                //             <span className={styles.money}>{coin}</span>
+                //         </div>
+                //     )  
+                // } else {
+                //     return (
+                //         <div className={styles.info} key={coin}>
+                //             <strong>{input}</strong> BTC is: <strong>$ {(input * result).toFixed(2)}</strong>
+                //             <span className={styles.money}>{coin}</span>
+                //         </div>
+                //     )
+                // }
             });
         }
     }, {
@@ -43913,7 +43930,7 @@ exports = module.exports = __webpack_require__(27)(false);
 
 
 // module
-exports.push([module.i, ".bitcoin__title__1DM0_ {\r\n    margin-top: 1.5rem;\r\n    margin-bottom: 3rem;\r\n    text-align: center;\r\n}\r\n\r\n.bitcoin__box__3Xt6N {\r\n    width: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0 auto;\r\n    margin-top: 1rem;\r\n}\r\n\r\n.bitcoin__info__2dz0s {\r\n    margin: auto;\r\n    margin-top: .8rem;\r\n    width: fit-content;\r\n    font-size: 25px;\r\n}\r\n\r\n.bitcoin__money__2YmT5 {\r\n    margin-left: .8rem;\r\n}", ""]);
+exports.push([module.i, ".bitcoin__title__1DM0_ {\r\n    margin-top: 1.5rem;\r\n    margin-bottom: 3rem;\r\n    text-align: center;\r\n}\r\n\r\n.bitcoin__box__3Xt6N {\r\n    width: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0 auto;\r\n    margin-top: 1rem;\r\n}\r\n\r\n.bitcoin__info__2dz0s {\r\n    margin: auto;\r\n    margin-top: .8rem;\r\n    width: fit-content;\r\n    font-size: 25px;\r\n}\r\n\r\n.bitcoin__money__2YmT5 {\r\n    margin-left: .8rem;\r\n}\r\n\r\n\r\n@media (max-width: 650px) {\r\n    .bitcoin__info__2dz0s {\r\n        font-size: 0.7rem;\r\n    }\r\n\r\n}", ""]);
 
 // exports
 exports.locals = {
