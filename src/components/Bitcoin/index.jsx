@@ -25,10 +25,7 @@ class Bitcoin extends Component {
             .then(data => {
                 // console.log(data);
                 const { bpi } = data;
-                this.setState( { bpi } )
-
-                // console.log(bpi.ARS.rate);
-                
+                this.setState( { bpi } );
                 
             });
     }
@@ -44,25 +41,37 @@ class Bitcoin extends Component {
             .map(coin => {
                 const price = bpi[coin].rate_float;
                 const result = price;
-                
+            
+              
 
-                if (coin === 'USD'){
-                    return (
-                        <div className={styles.info} key={coin}>
-                            <hr/>
-                            <strong>{input}</strong> BTC is: <strong>U$S {input * Math.round(result)}</strong> 
-                            <span className={styles.money}>{coin}</span>
-                        </div>
-                    )  
-                } else {
-                    return (
-                        <div className={styles.info} key={coin}>
-                            <strong>{input}</strong> BTC is: <strong>$ {input * Math.round(result)}</strong>
-                            <span className={styles.money}>{coin}</span>
-                        </div>
-                    )
-                }
-            })
+                const show = coin === 'USD' ? 'US$' : '$';
+                return (
+                    <div className={styles.info} key={coin}>
+                        <hr/>
+                        <strong>{input}</strong> BTC is: <strong>{show}{(input * result).toFixed(2)}</strong>                                                       
+                        <span className={styles.money}>{coin}</span>
+                    </div>
+                );
+                
+               
+
+                // if (coin === 'USD'){
+                //     return (
+                //         <div className={styles.info} key={coin}>
+                //             <hr/>
+                //             <strong>{input}</strong> BTC is: <strong>U$S {(input * result).toFixed(2)}</strong> 
+                //             <span className={styles.money}>{coin}</span>
+                //         </div>
+                //     )  
+                // } else {
+                //     return (
+                //         <div className={styles.info} key={coin}>
+                //             <strong>{input}</strong> BTC is: <strong>$ {(input * result).toFixed(2)}</strong>
+                //             <span className={styles.money}>{coin}</span>
+                //         </div>
+                //     )
+                // }
+            });
         
     }
 

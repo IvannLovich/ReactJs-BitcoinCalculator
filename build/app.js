@@ -29302,9 +29302,6 @@ var Bitcoin = function (_Component) {
                 var bpi = data.bpi;
 
                 _this2.setState({ bpi: bpi });
-
-                // console.log(bpi.ARS.rate);
-
             });
         }
     }, {
@@ -29319,52 +29316,29 @@ var Bitcoin = function (_Component) {
                 var price = bpi[coin].rate_float;
                 var result = price;
 
-                if (coin === 'USD') {
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.info, key: coin },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'strong',
-                            null,
-                            input
-                        ),
-                        ' BTC is: ',
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'strong',
-                            null,
-                            'U$S ',
-                            input * Math.round(result)
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'span',
-                            { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.money },
-                            coin
-                        )
-                    );
-                } else {
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.info, key: coin },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'strong',
-                            null,
-                            input
-                        ),
-                        ' BTC is: ',
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'strong',
-                            null,
-                            '$ ',
-                            input * Math.round(result)
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'span',
-                            { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.money },
-                            coin
-                        )
-                    );
-                }
+                var show = coin === 'USD' ? 'US$' : '$';
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.info, key: coin },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'strong',
+                        null,
+                        input
+                    ),
+                    ' BTC is: ',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'strong',
+                        null,
+                        show,
+                        (input * result).toFixed(2)
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'span',
+                        { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.money },
+                        coin
+                    )
+                );
             });
         }
     }, {
