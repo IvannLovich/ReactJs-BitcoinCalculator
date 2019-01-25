@@ -91,15 +91,14 @@ class Bitcoin extends Component {
                 <h2 className={styles.title}>Bitcoin Price:</h2>
                 {this._renderCoin()}
                 <div className={styles.box}>
-                    <TextField
-                        value = {this.state.input} 
-                        onChange={this._handleChange}
-                        id="filled-search"
-                        label="Enter a value"
-                        type="search"
-                        margin="normal"
-                        variant="filled"
-                    />
+                <TextField
+                id="outlined-adornment-amount"
+                className={styles.input}
+                variant="outlined"
+                label="Amount"
+                value={this.state.input}
+                onChange={this._handleChange}
+                />
                 </div>
             </div>
         )

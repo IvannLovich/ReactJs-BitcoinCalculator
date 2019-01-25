@@ -12,6 +12,7 @@
     margin-top: 1rem;
 }
 
+
 .info {
     margin: auto;
     margin-top: .8rem;
@@ -26,7 +27,11 @@
 
 @media (max-width: 650px) {
     .info {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+    .input {
+        width: 95px;
+        height: 0.2px;
     }
 
 }
