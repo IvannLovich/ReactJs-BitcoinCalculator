@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 76);
@@ -29331,6 +29331,7 @@ var Bitcoin = function (_Component) {
                         'strong',
                         null,
                         show,
+                        ' ',
                         (input * result).toFixed(2)
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -29375,7 +29376,7 @@ var Bitcoin = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h2',
                     { className: __WEBPACK_IMPORTED_MODULE_3__bitcoin_css___default.a.title },
-                    'Bitcoin Price:'
+                    'Bitcoin Price'
                 ),
                 this._renderCoin(),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -43929,7 +43930,7 @@ exports = module.exports = __webpack_require__(27)(false);
 
 
 // module
-exports.push([module.i, ".bitcoin__title__1DM0_ {\r\n    margin-top: 1.5rem;\r\n    margin-bottom: 3rem;\r\n    text-align: center;\r\n}\r\n\r\n.bitcoin__box__3Xt6N {\r\n    width: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0 auto;\r\n    margin-top: 1rem;\r\n}\r\n\r\n\r\n.bitcoin__info__2dz0s {\r\n    margin: auto;\r\n    margin-top: .8rem;\r\n    width: fit-content;\r\n    font-size: 25px;\r\n}\r\n\r\n.bitcoin__money__2YmT5 {\r\n    margin-left: .8rem;\r\n}\r\n\r\n\r\n@media (max-width: 650px) {\r\n    .bitcoin__info__2dz0s {\r\n        font-size: 0.8rem;\r\n    }\r\n    .bitcoin__input__3JDw- {\r\n        width: 95px;\r\n        height: 0.2px;\r\n    }\r\n\r\n}", ""]);
+exports.push([module.i, ".bitcoin__title__1DM0_ {\r\n    margin-top: 1.5rem;\r\n    margin-bottom: 3rem;\r\n    text-align: center;\r\n}\r\n\r\n.bitcoin__box__3Xt6N {\r\n    width: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0 auto;\r\n    margin-top: 1rem;\r\n}\r\n\r\n\r\n.bitcoin__info__2dz0s {\r\n    margin: auto;\r\n    margin-top: .8rem;\r\n    width: fit-content;\r\n    font-size: 25px;\r\n}\r\n\r\n.bitcoin__money__2YmT5 {\r\n    margin-left: .8rem;\r\n}\r\n\r\n\r\n@media (max-width: 650px) {\r\n    .bitcoin__info__2dz0s {\r\n        font-size: 1rem;\r\n    }\r\n    .bitcoin__title__1DM0_ {\r\n        font-size: x-large\r\n    }\r\n\r\n    .bitcoin__input__3JDw- {\r\n        width: 150px;\r\n    }\r\n\r\n}", ""]);
 
 // exports
 exports.locals = {

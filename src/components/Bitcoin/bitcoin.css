@@ -27,11 +27,14 @@
 
 @media (max-width: 650px) {
     .info {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
+    .title {
+        font-size: x-large
+    }
+
     .input {
-        width: 95px;
-        height: 0.2px;
+        width: 150px;
     }
 
 }

@@ -49,7 +49,7 @@ class Bitcoin extends Component {
                 
                     <div className={styles.info} key={coin}>
                         <hr/>
-                        <strong>{input}</strong> BTC is: <strong>{show}{(input * result).toFixed(2)}</strong>                                                       
+                        <strong>{input}</strong> BTC is: <strong>{show} {(input * result).toFixed(2)}</strong>                                                       
                         <span className={styles.money}>{coin}</span>
                     </div>
         
@@ -88,7 +88,7 @@ class Bitcoin extends Component {
         
         return(
             <div>
-                <h2 className={styles.title}>Bitcoin Price:</h2>
+                <h2 className={styles.title}>Bitcoin Price</h2>
                 {this._renderCoin()}
                 <div className={styles.box}>
                 <TextField
