@@ -1,5 +1,7 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const inProduction = (process.env.NODE_ENV === 'production');
 const path = require('path');
 
 const cssModules = 'modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]';
@@ -51,6 +53,23 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({ template: './src/assets/index.html' }),
-        new ExtractTextPlugin('style.css', { allChunks: true })
+        new ExtractTextPlugin('style.css', { allChunks: true }),
+        new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
+        new webpack.optimize.UglifyJsPlugin()
     ]
+};
+
+
+if (inProduction){
+    module.exports.plugins.push(
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        })
+    );
+
+    module.exports.plugins.push(
+        new webpack.optimize.UglifyJsPlugin()
+    );
 }
