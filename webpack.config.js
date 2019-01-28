@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const inProduction = (process.env.NODE_ENV === 'production');
 const path = require('path');
 
 const cssModules = 'modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]';
@@ -59,17 +58,3 @@ module.exports = {
     ]
 };
 
-
-if (inProduction){
-    module.exports.plugins.push(
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        })
-    );
-
-    module.exports.plugins.push(
-        new webpack.optimize.UglifyJsPlugin()
-    );
-}
